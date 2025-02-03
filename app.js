@@ -74,7 +74,8 @@ app.get("/api/classify-number", async (req, res) => {
         .split("")
         .reduce((sum, digit) => sum + parseInt(digit), 0);
 
-    const funFact = await getFunFact(num);
+    // Fetch fun fact asynchronously while other calculations are being done
+    const funFactPromise = getFunFact(num);
 
     res.json({
         number: num,
@@ -82,7 +83,7 @@ app.get("/api/classify-number", async (req, res) => {
         is_perfect: isPerfect(num),
         properties,
         digit_sum: digitSum,
-        fun_fact: funFact,
+        fun_fact: await funFactPromise,
     });
 });
 
