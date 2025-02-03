@@ -6,7 +6,7 @@ The API takes a number and returns interesting mathematical properties about it,
 
 ##  Live Deployment  
 Access the deployed API here:  
-[https://number-classifier-ysc9.onrender.com](https://number-classifier-ysc9.onrender.com)  
+[https://number-classifier-ysc9.onrender.com/api/classify-number](https://number-classifier-ysc9.onrender.com/api/classify-number)  
 
 ---
 
@@ -17,10 +17,12 @@ To run this project locally, follow these steps:
 ```sh
 git clone https://github.com/dainty92/hng12-stage1.git
 cd hng12-stage1
+```
 
 ### 2. Install Dependencies
 ```sh
 npm install
+```
 
 ### 3. Start the server
 ```sh
